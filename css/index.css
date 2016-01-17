@@ -3,15 +3,38 @@ body {
   background-color: #f7faff;
 }
 
+@media (min-width: 992px) {
+  .sidebar {
+    float: right;
+    width: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+  }
+
+  .content {
+    float: left;
+    max-width: 720px;
+  }
+}
+
 .content {
-  display: inline-block;
+  text-align: left;
+}
+
+#photoContainer .img-container {
+  float: left;
+  padding: 10px;
+}
+
+#photoContainer .img-photo {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
 }
 
 .sidebar {
-  float: left;
-  width: 200px;
-  margin-left: 30px;
-  margin-right: 30px;
+  text-align: left;
 }
 
 .sidebar .sidebar-body {
