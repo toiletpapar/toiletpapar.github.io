@@ -36,7 +36,7 @@ function loadPictures() {
     photosContainerEl.appendChild(clone);
 
     var imgContainerEl = document.querySelectorAll('.img-container')[i];
-    imgContainerEl.addEventListener('click', expandPicture.bind(this, picture));
+    imgContainerEl.querySelector('.img-photo').addEventListener('click', expandPicture.bind(this, picture));
   }
 }
 
