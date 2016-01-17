@@ -3,6 +3,10 @@ body {
   background-color: #f7faff;
 }
 
+button {
+  margin: 10px;
+}
+
 @media (min-width: 992px) {
   .sidebar {
     float: right;

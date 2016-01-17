@@ -1,8 +1,9 @@
 //Load pictures from resources folder
 //Only supports browsers with HTML5
-function loadPictures() {
-  const RESOURCE_DIR = 'res/';
 
+const RESOURCE_DIR = 'res/';
+
+function loadPictures() {
   //Hardcoded pictures because we're only doing this client-side
   var pictures = [
     'Creepy Pillow.png',
@@ -33,5 +34,24 @@ function loadPictures() {
     //Clone template and insert into DOM
     var clone = document.importNode(template.content, true);
     photosContainerEl.appendChild(clone);
+
+    var imgContainerEl = document.querySelectorAll('.img-container')[i];
+    imgContainerEl.addEventListener('click', expandPicture.bind(this, picture));
   }
+}
+
+function expandPicture(picture) {
+  var dialogEl = document.querySelector('#pictureModal');
+
+  var imgEl = dialogEl.querySelector('.img-full');
+  imgEl.src = RESOURCE_DIR + picture;
+
+  var btnEl = dialogEl.querySelector('.btn');
+  btnEl.addEventListener('click', close);
+
+  dialogEl.showModal();
+}
+
+function close() {
+  document.querySelector('#pictureModal').close();
 }
