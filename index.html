@@ -16,19 +16,34 @@
         <span class="panel-title">Welcome!</span>
       </div>
       <div class="sidebar-body panel-body">
-        <div class="sidebar-link">
+        <div class="sidebar-link clickable clickable-container" onclick="showHome()">
           <span class="glyphicon glyphicon-home"></span>
           <span>Home</span>
         </div>
         <hr>
-        <div class="sidebar-link">
+        <div class="sidebar-link clickable clickable-container" onclick="showPhotos()">
           <span class="glyphicon glyphicon-picture"></span>
           <span>Photos<span>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-md-8">
+  <div id="homePanel" class="col-md-8">
+    <div class="content panel panel-default">
+      <div class="panel-heading">
+        <span class="panel-title">Home</span>
+      </div>
+      <div class="panel-body">
+        <p>Hey Everybody!</p>
+        <p>This is a website that I built for/with my friend who's really interested in learning some of the things web designers talk about. In this website we have a simple native javascript implementation of a photo viewer so my friend can display her wonderful designs. We also have this short little blurb that should represent who she is and an embedded player to show her work with videos. I hope she takes away a lot from this experience and finds what she needs. Please note some of the limitations on this site. Specifically, the modal to enlarge photos when you click on a photo only works in Chrome and your browser must support HTML5. If you want to look at something more powerful with all the nice bells and whistles, check out the spirit-of-adventure repository. Below you'll find a link to one of my favourite youtube videos.</p>
+        <hr>
+        <div class="center video-container">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/0tu4H1g3CtE" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="photoPanel" class="col-md-8 hide">
     <div class="content panel panel-default">
       <div class="panel-heading">
         <span class="panel-title">Photos</span>

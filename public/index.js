@@ -40,6 +40,9 @@ function loadPictures() {
   }
 }
 
+/*
+ * Modals
+ */
 function expandPicture(picture) {
   var dialogEl = document.querySelector('#pictureModal');
 
@@ -54,4 +57,23 @@ function expandPicture(picture) {
 
 function close() {
   document.querySelector('#pictureModal').close();
+}
+
+/*
+ * Sidebar
+ */
+function showHome() {
+  var homeContainer = document.getElementById('homePanel');
+  var photoContainer = document.getElementById('photoPanel');
+
+  homeContainer.className = "col-md-8";
+  photoContainer.className = "col-md-8 hide";
+}
+
+function showPhotos() {
+  var homeContainer = document.getElementById('homePanel');
+  var photoContainer = document.getElementById('photoPanel');
+
+  homeContainer.className = "col-md-8 hide";
+  photoContainer.className = "col-md-8";
 }
